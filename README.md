@@ -65,7 +65,8 @@ README.md:               1.37 KB / 1.37 KB ┃▓▓▓▓▓▓▓▓▓▓▓�
 Removing `minio/mybucket/README.md`.
 ``` 
 
-
+# Cookbook
+https://docs.minio.io/docs/minio-client-quickstart-guide
 
 
 
