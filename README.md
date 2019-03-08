@@ -43,3 +43,30 @@ mc config host add minio <MINIO STACK HOST> <ACCESS_KEY> <SECRET_KEY>
 ```
 mc config host add minio http://infa-swarm-t1101:10001 $(cat ACCESS_KEY) $(cat SECRET_KEY)
 ```
+You are now have an alise, minio
+
+### Usage
+
+* Create a bucket
+```
+[root@infa-dcoses-t1101 docker-minio-swarm]# mc mb minio/mybucket
+Bucket created successfully `minio/mybucket`.
+```
+
+* Copy a file to the bucket
+```
+[root@infa-dcoses-t1101 docker-minio-swarm]# mc cp README.md minio/mybucket
+README.md:               1.37 KB / 1.37 KB ┃▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓┃ 100.00% 41.79 KB/s 0s
+```
+
+* Remove the file from the bucket
+```
+[root@infa-dcoses-t1101 docker-minio-swarm]# mc rm minio/mybucket/README.md
+Removing `minio/mybucket/README.md`.
+``` 
+
+
+
+
+
+
